@@ -33,7 +33,9 @@ axiosRetry(axios, {
 });
 
 async function startAgent() {
-  logger.info('Starting DB Latency Tracker Agent', { config });
+  // Log config safely (exclude sensitive data)
+  const safeConfig = { ...config, databaseUrl: '***', ingestionToken: '***' };
+  logger.info('Starting DB Latency Tracker Agent', { config: safeConfig });
 
   let collector: Collector;
   if (config.dbType === 'postgres') {
