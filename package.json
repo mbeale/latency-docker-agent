@@ -1,0 +1,30 @@
+{
+  "name": "db-latency-tracker-agent",
+  "version": "1.0.0",
+  "description": "Dockerized Polling Agent for DB Latency Tracking",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "axios-retry": "^4.5.0",
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.6.3",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/mysql2": "github:types/mysql2",
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.11.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
