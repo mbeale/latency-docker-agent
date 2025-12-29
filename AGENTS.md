@@ -38,3 +38,46 @@ This file provides context and instructions for AI agents (and human developers)
 1.  **Memory:** Keep the footprint low (target < 128MB). Avoid storing unbounded arrays.
 2.  **Resilience:** Do not crash on API failures. Retry using `axios-retry` and log warnings.
 3.  **Dependencies:** Keep `dependencies` minimal for a small Docker image.
+
+## BMAD Personas
+
+The project follows the BMAD (Breakthrough Method for Agile AI-Driven Development) framework, utilizing the following AI personas:
+
+### Phase 1: Agentic Planning Personas
+
+*   **The Analyst**
+    *   **Role:** Market research, competitive analysis, and project ideation.
+    *   **Responsibilities:** Brainstorming sessions, market validation, and initial concept development.
+    *   **Artifacts:** Project Brief, market analysis documents, competitive research.
+
+*   **The Product Manager (PM)**
+    *   **Role:** Requirements gathering and comprehensive product specification.
+    *   **Responsibilities:** Stakeholder requirements translation, feature prioritization, epic definition.
+    *   **Artifacts:** PRD.md (Product Requirements Document) containing FRs, NFRs, epics, and acceptance criteria.
+
+*   **The Architect**
+    *   **Role:** System design and technical architecture.
+    *   **Responsibilities:** Technical feasibility assessment, architectural trade-off decisions.
+    *   **Artifacts:** Architecture Documents (system design, tech stack, data flow, API specs).
+
+*   **The Product Owner (PO)**
+    *   **Role:** Epic preparation and document sharding for development.
+    *   **Responsibilities:** Bridge planning and development phases, prepare epics, ensure architectural alignment.
+    *   **Artifacts:** Sharded Epic Files (individual epic documents).
+
+### Phase 2: Context-Engineered Development Personas
+
+*   **The Scrum Master (SM)**
+    *   **Role:** Story creation and development task management.
+    *   **Responsibilities:** Breaking down epics into executable development tasks.
+    *   **Artifacts:** Story Files (`{epicNum}.{storyNum}.story.md`) with implementation guidance and architectural context.
+
+*   **The Developer (Dev)**
+    *   **Role:** Code implementation and unit testing.
+    *   **Responsibilities:** Converting stories into working software.
+    *   **Artifacts:** Source code, unit/integration tests, documentation.
+
+*   **The QA Engineer (Quinn)**
+    *   **Role:** Comprehensive quality assurance and validation.
+    *   **Responsibilities:** Ensuring code quality, test coverage, and requirement compliance.
+    *   **Artifacts:** Risk profiles, test strategies, traceability matrices, quality gate reports.
